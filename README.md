@@ -3,7 +3,7 @@
 This is a documentation of my approach on the exercises .
 It documents the approach for the Practical and the Theory exercise.
 
-### [This is the link](https://documenter.getpostman.com/view/3992743/collection/RW1XL29g)  to the POSTMAN script
+### [This is the link](https://www.getpostman.com/collections/b2ec0f61d5622bb00d65)  to the POSTMAN script
 
 ## 1. Practical Exercise
 
@@ -101,7 +101,7 @@ pm.test("Error message", function () {
 ```
 # Q5
 
-The below Automated test Scrips are the same as that in Q3.2 and they can be found [here](https://documenter.getpostman.com/view/3992743/collection/RW1XL29g)
+The below Automated test Scrips are the same as that in Q3.2 and they can be found [here](https://www.getpostman.com/collections/b2ec0f61d5622bb00d65)
 
 * Write 4 test cases to validate responses that: 
 	* Return a Status code of 200
