@@ -135,7 +135,7 @@ Definition |A step taken to validate the functionality of a system based on expe
 Example |Filling an online form to validate the appearance of an error message/welcome message upon inputing incorrect or correct credentials respectively.| Filling an online form with credentials and receiving an appropriate page/message upon clicking submiting button.
 
 ## Q2
-* In CI, execution fo Automatesd Tests would happen after a Build of the code base from developers. Automated Regression Tests are supposed to be executed after every code patch/commit on to the code base.
+* In CI, executing Automated Tests would happen after a Build of the code base from the developers. Automated Regression Tests are supposed to be executed after every code patch/commit on to the code base. This can be achieved by using Jenkins.
 
 ## Q3
 * Testing in the API level is mainly integration testing since the function of an API is establishing a bridge between systems/services/applications etc, to see if they speak to each other. Security and Functional testing are as important for API testing.
