@@ -127,18 +127,23 @@ The below Automated test Scrips are the same as that in Q3.2 and they can be fou
 
 ## 2. Theoretical Exercise
 
+## Q1
 
-# Q1
+ -|A Test Case        |A Use Case
+--|-------------------|-----------------
+Definition |A step taken to validate the functionality of a system based on expected results from a specific requirements|A series of steps taken to achieve an interactive task between a user/system and another user/system
+Example |Filling an online form to validate the appearance of an error message/welcome message upon inputing incorrect or correct credentials respectively.| Filling an online form with credentials and receiving an appropriate page/message upon clicking submiting button.
 
-* A Test Case
-* A Use Case
+## Q2
+* In CI, execution fo Automatesd Tests would happen after a Build of the code base from developers. Automated Regression Tests are supposed to be executed after every code patch/commit on to the code base.
 
-# Q2
-Execution of Automated Test in a CI
-# Q3
-Type of Testing in API
-# Q4
-time to involve a software quality engineer in the SDLC
-# Q5
+## Q3
+* Testing in the API level is mainly integration testing since the function of an API is establishing a bridge between systems/services/applications etc, to see if they speak to each other. Security and Functional testing are as important for API testing.
 
-what percentage of automation vs manual testing would be ideal
+## Q4
+* This depends on the scale/size and structure of the company.
+	* In a small sized company: a QE will be involved from the Planning stage up until the deployment.
+	* In a large company, there could be a discrete structure such as domains only for developers, testers etc: In this case, the QE might only be involved after a build for the testing phase to begin and, during and after the deployment for maintenance purposes.
+	
+## Q5
+* The expectation is a successful call: I would attribute 10% to Manual Testing since test cases had to be designed around changing parameter inputs; as a result Automation testing had to be 90%.
