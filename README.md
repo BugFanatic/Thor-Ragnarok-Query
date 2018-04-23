@@ -3,6 +3,7 @@
 This is a documentation of my approach on the exercises .
 It documents the approach for the Practical and the Theory exercise.
 
+### [This is the link](https://documenter.getpostman.com/view/3992743/collection/RW1XL29g)  to the POSTMAN script
 
 ## 1. Practical Exercise
 
@@ -100,3 +101,44 @@ pm.test("Error message", function () {
 ```
 # Q5
 
+The below Automated test Scrips are the same as that in Q3.2 and they can be found [here](https://documenter.getpostman.com/view/3992743/collection/RW1XL29g)
+
+* Write 4 test cases to validate responses that: 
+	* Return a Status code of 200
+	```js
+	pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+	```
+	* Return the Title "Thor Ragnarok"
+	```js
+	pm.test("Title is Thor: Ragnarok", function () {
+    pm.expect(pm.response.text()).to.include("Thor: Ragnarok");
+	```
+	* Return a "imdbID" of tt3501632
+	```js
+	pm.test("Response imdbID is tt3501632", function () {
+    pm.expect(pm.response.text()).to.include("tt3501632");});
+	```
+	* Do not return a "imdbID" of "tt6611130"
+	```js
+	pm.test("Response imdbID is not tt6611130", function () {
+    pm.expect(pm.response.text()).to.not.include("tt6611130");});
+	```
+
+## 2. Theoretical Exercise
+
+
+# Q1
+
+* A Test Case
+* A Use Case
+
+# Q2
+Execution of Automated Test in a CI
+# Q3
+Type of Testing in API
+# Q4
+time to involve a software quality engineer in the SDLC
+# Q5
+
+what percentage of automation vs manual testing would be ideal
