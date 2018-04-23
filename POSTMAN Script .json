@@ -1,0 +1,353 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "f743f467-cffd-afc1-501e-accfa429bbab",
+			"name": "Thor:Ragnarok Collection Query",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"variables": null,
+			"order": [],
+			"folders_order": [
+				"fc8eb35d-086f-caef-c59d-e12c90f158c5",
+				"63ec76a0-b3e4-2eb1-64f8-d795b9dfc652"
+			],
+			"folders": [
+				{
+					"id": "63ec76a0-b3e4-2eb1-64f8-d795b9dfc652",
+					"name": "Negative Query",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "f743f467-cffd-afc1-501e-accfa429bbab",
+					"folder": null,
+					"order": [
+						"eebdf271-f916-ab13-a645-9ad0d40a08be",
+						"1d76cd3f-fff6-66dd-417f-c1ea851d4374",
+						"524f7283-d3b9-d883-963a-a37466abf3a1",
+						"b053e963-d954-6c14-00d3-0d9ce204bea0"
+					],
+					"folders_order": [],
+					"collectionId": "f743f467-cffd-afc1-501e-accfa429bbab",
+					"folderId": "63ec76a0-b3e4-2eb1-64f8-d795b9dfc652"
+				},
+				{
+					"id": "fc8eb35d-086f-caef-c59d-e12c90f158c5",
+					"name": "Positive Query",
+					"description": "",
+					"auth": null,
+					"events": null,
+					"collection": "f743f467-cffd-afc1-501e-accfa429bbab",
+					"folder": null,
+					"order": [
+						"35173930-e2b1-03cd-5a13-5687d7e41fa0",
+						"4c306304-2982-be95-5a5f-877cf54bf315"
+					],
+					"folders_order": [],
+					"collectionId": "f743f467-cffd-afc1-501e-accfa429bbab",
+					"folderId": "fc8eb35d-086f-caef-c59d-e12c90f158c5"
+				}
+			],
+			"requests": [
+				{
+					"id": "1d76cd3f-fff6-66dd-417f-c1ea851d4374",
+					"name": "2. Only API parameter and no ID parameter",
+					"url": "{{url}}?apikey=1f48155a",
+					"description": null,
+					"data": [],
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": null,
+					"queryParams": [
+						{
+							"key": "apikey",
+							"value": "1f48155a",
+							"equals": true
+						}
+					],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);});",
+									"",
+									"pm.test(\"Error message\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Error\");});"
+								]
+							}
+						}
+					],
+					"folder": "63ec76a0-b3e4-2eb1-64f8-d795b9dfc652",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);});\n\npm.test(\"Error message\", function () {\n    pm.expect(pm.response.text()).to.include(\"Error\");});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f743f467-cffd-afc1-501e-accfa429bbab",
+					"headers": ""
+				},
+				{
+					"id": "35173930-e2b1-03cd-5a13-5687d7e41fa0",
+					"name": "1. GET Thor:Ragnarok",
+					"url": "{{url}}?s=Thor%3ARagnarok&apikey=1f48155a",
+					"description": "Qurying Thor: Ragnarok using an APIkey generated from http://www.omdbapi.com/apikey.aspx",
+					"data": [],
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": null,
+					"queryParams": [
+						{
+							"key": "s",
+							"value": "Thor%3ARagnarok",
+							"equals": true
+						},
+						{
+							"key": "apikey",
+							"value": "1f48155a",
+							"equals": true
+						}
+					],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"GET Thor: Ragnarok\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Thor: Ragnarok\");",
+									"});",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"folder": "fc8eb35d-086f-caef-c59d-e12c90f158c5",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"GET Thor: Ragnarok\", function () {\n    pm.expect(pm.response.text()).to.include(\"Thor: Ragnarok\");\n});\n\n\n\n",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f743f467-cffd-afc1-501e-accfa429bbab",
+					"headers": ""
+				},
+				{
+					"id": "4c306304-2982-be95-5a5f-877cf54bf315",
+					"name": "2. GET by ID",
+					"url": "{{url}}?i=tt3501632&apikey=1f48155a",
+					"description": "Searching Movie using the imdbID (ie ID=tt3501632)",
+					"data": [],
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": null,
+					"queryParams": [
+						{
+							"key": "i",
+							"value": "tt3501632",
+							"equals": true
+						},
+						{
+							"key": "apikey",
+							"value": "1f48155a",
+							"equals": true
+						}
+					],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Title is Thor: Ragnarok\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Thor: Ragnarok\");",
+									"});",
+									"",
+									"pm.test(\"Response imdbID is tt3501632\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"tt3501632\");});",
+									"",
+									"pm.test(\"Response imdbID is not tt6611130\", function () {",
+									"    pm.expect(pm.response.text()).to.not.include(\"tt6611130\");",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "fc8eb35d-086f-caef-c59d-e12c90f158c5",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Title is Thor: Ragnarok\", function () {\n    pm.expect(pm.response.text()).to.include(\"Thor: Ragnarok\");\n});\n\npm.test(\"Response imdbID is tt3501632\", function () {\n    pm.expect(pm.response.text()).to.include(\"tt3501632\");});\n\npm.test(\"Response imdbID is not tt6611130\", function () {\n    pm.expect(pm.response.text()).to.not.include(\"tt6611130\");\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f743f467-cffd-afc1-501e-accfa429bbab",
+					"headers": ""
+				},
+				{
+					"id": "524f7283-d3b9-d883-963a-a37466abf3a1",
+					"name": "3. Only ID parameter and without API KEY value",
+					"url": "{{url}}?i=tt3501632&apikey=",
+					"description": null,
+					"data": [],
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": null,
+					"queryParams": [
+						{
+							"key": "i",
+							"value": "tt3501632",
+							"equals": true
+						},
+						{
+							"key": "apikey",
+							"value": "",
+							"equals": false
+						}
+					],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									"",
+									"pm.test(\"Error message\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Error\");",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "63ec76a0-b3e4-2eb1-64f8-d795b9dfc652",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Status code is 401\", function () {\n    pm.response.to.have.status(401);\n});\n\npm.test(\"Error message\", function () {\n    pm.expect(pm.response.text()).to.include(\"Error\");\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f743f467-cffd-afc1-501e-accfa429bbab",
+					"headers": ""
+				},
+				{
+					"id": "b053e963-d954-6c14-00d3-0d9ce204bea0",
+					"name": "4. Incorrect/Invalid API KEY Value",
+					"url": "{{url}}?i=tt3501632&apikey=123456",
+					"description": null,
+					"data": [],
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": null,
+					"queryParams": [
+						{
+							"key": "i",
+							"value": "tt3501632",
+							"equals": true
+						},
+						{
+							"key": "apikey",
+							"value": "123456",
+							"equals": true
+						}
+					],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									"",
+									"pm.test(\"Error message\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Error\");",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "63ec76a0-b3e4-2eb1-64f8-d795b9dfc652",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Status code is 401\", function () {\n    pm.response.to.have.status(401);\n});\n\npm.test(\"Error message\", function () {\n    pm.expect(pm.response.text()).to.include(\"Error\");\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f743f467-cffd-afc1-501e-accfa429bbab",
+					"headers": ""
+				},
+				{
+					"id": "eebdf271-f916-ab13-a645-9ad0d40a08be",
+					"name": "1. No Parameters",
+					"url": "{{url}}",
+					"description": "Querying without any endpoints",
+					"data": [],
+					"dataMode": "params",
+					"headerData": [],
+					"method": "GET",
+					"pathVariableData": null,
+					"queryParams": [],
+					"auth": null,
+					"events": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Expecting a Html resonse\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"</html>\");",
+									"});"
+								]
+							}
+						}
+					],
+					"folder": "63ec76a0-b3e4-2eb1-64f8-d795b9dfc652",
+					"preRequestScript": null,
+					"tests": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Expecting a Html resonse\", function () {\n    pm.expect(pm.response.text()).to.include(\"</html>\");\n});",
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "f743f467-cffd-afc1-501e-accfa429bbab",
+					"headers": ""
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"id": "0b0aa8af-1311-427c-8dbc-211ce21dae5d",
+			"name": "My Workspace - globals",
+			"values": [
+				{
+					"key": "url",
+					"value": "http://www.omdbapi.com",
+					"enabled": true,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"headerPresets": [],
+	"globals": []
+}
