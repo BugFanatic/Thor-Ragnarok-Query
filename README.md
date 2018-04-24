@@ -3,6 +3,8 @@
 This is a documentation of my approach on the exercises .
 It documents the approach for the Practical and the Theory exercise.
 
+The **"Thor-Ragnarok Collection.json"** was ran in POSTMAN. 
+
 ### [This is the link](https://www.getpostman.com/collections/b2ec0f61d5622bb00d65)  to the POSTMAN script
 
 ## 1. Practical Exercise
